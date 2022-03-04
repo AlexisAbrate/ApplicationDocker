@@ -2,21 +2,19 @@
 
 <head>
     <title>hello</title>
-    <script src="js/hello.js"></script>
-    <script>
-        function helloWorldInSpanMsg() {
-            var eltSpanMsg = document.getElementById("spanMsg");
-            eltSpanMsg.innerHTML = "<b>hello world</b>";
-        }
-    </script>
+    <script src="bonjour.js"></script>
+    
 </head>
 
 <body>
     <h1>page hello.html</h1>
-    <input type="button" value=" say 'hello world'" onclick="helloWorldInSpanMsg()" />
-    <span id="spanMsg"></span>
+    <input id="nom" type="text" placeholder="nom"/>
+    <button value="bonjour" onclick="direBonjour()">Afficher</button>
+    <span id="span" class="hidden">
+
+    </span>
     <hr/>
-    <input type="button" value="promptAndAlert" onclick="promptAndAlert()" />
+    
 
 </body>
 

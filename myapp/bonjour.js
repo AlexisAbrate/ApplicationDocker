@@ -1,10 +1,11 @@
 function direBonjour() {
-
-        var nom = document.getElementById("nom");
+        var nom = "";
+        nom = document.getElementById("nom");
+        console.log("nom :" + nom.value);
         if(nom!=null) {
             var span = document.getElementById("span");
-            span.setAttribute("class","visible-fade")
-            span.innerHTML = "Bonjour " + nom;
+            span.setAttribute("class","visible")
+            span.innerHTML = "Bonjour " + nom.value;
 
         }
 }
