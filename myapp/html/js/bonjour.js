@@ -1,3 +1,6 @@
+console.log("script chargé");
+
+
 function direBonjour() {
         var nom = "";
         nom = document.getElementById("nom");

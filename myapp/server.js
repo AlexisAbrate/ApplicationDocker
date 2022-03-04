@@ -1,12 +1,13 @@
-var http = require('http');
-//import * as http from 'http'; //es2015 , typescript
+var express = require('express');
+var app = express();
 
-var myHttpFunction = function(req , res ) {
-    res.writeHead(200 , {"Content-Type": "text/html"}); //OK=200
-    res.write("<html><body><b>hello world</b></body></html>")
-    res.end();
-};
+app.use('/html', express.static(__dirname+"/html"));
+app.use('/js', express.static(__dirname+"/js"));
+app.get('/', function(req , res ) {
+  res.redirect('/html/index.html');
+});
 
-var server = http.createServer(myHttpFunction);
-console.log("http://localhost:8282")
-server.listen(8282);
+let backendPort = process.env.PORT || 8282; 
+app.listen(backendPort , function () {
+  console.log("http://localhost:"+backendPort);
+});
